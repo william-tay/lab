@@ -11,6 +11,11 @@ class Test:
         del self.p1
         del self.p2
 
+    def test__init__(self):
+        assert self.p1.get_name() == "Steve"
+        assert self.p2.get_name() == "Joey"
+        assert self.p2.get_balance() == 0
+
     def test_account(self):
         #Withdraw tests
         assert self.p1.withdraw(77) is False
